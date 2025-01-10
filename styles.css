@@ -1,0 +1,185 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f8f9fa; */
+    background-color: #cac6b79c;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #343a40;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    font-family: "Rubik Vinyl", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0 10px; 
+    
+    font-family: "Permanent Marker", serif;
+    font-style: normal;
+  }
+  
+  #counters {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  #counters span {
+    margin: 0 10px;
+    color: #6c757d;
+  }
+  
+  #new-game-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    /* color: #fff; */
+    /* background-color: #007bff; */
+    color: #774d00;
+    background-color: #ffd000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    font-family: "Permanent Marker", serif;
+    font-style: normal;
+  }
+  
+  #new-game-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Board styles */
+  #board {
+    display: grid;
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 900px;
+  }
+  
+  .cell {
+    position: relative;
+    width: 100%;
+    padding-top: 50%; 
+    background-color: #e9ecef; 
+    background-image: url('assets/racoon.jpg'); 
+    background-size: cover; 
+    background-position: center; /* Centers the image */
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+}
+
+.cell:hover {
+    transform: scale(1.05); /* Enlarges the card slightly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a pop-out effect */
+}
+
+.cell img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cell.revealed {
+    background-image: none; /* Removes the back image */
+    background-color: #d4edda; /* Optional: greenish background for revealed cards */
+    border-color: #c3e6cb;
+}
+
+.cell.revealed img {
+    opacity: 1; /* Reveals the image */
+}
+
+
+/* General styles remain unchanged */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size */
+        margin-bottom: 5px; /* Reduce margin for a tighter layout */
+    }
+
+    .header {
+        flex-direction: row; /* Stack the header elements vertically */
+        /* align-items: center;  */
+        justify-content: space-between;
+    }
+
+    #new-game-button {
+        margin-bottom: 10px; /* Add spacing between button and counters */
+        /* width: 80%; Make the button wider */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    #counters {
+        font-size: 16px; /* Adjust font size */
+        margin-bottom: 20px;
+    }
+
+    #board {
+        gap: 5px; /* Reduce gaps between cells */
+        margin: 10px auto; /* Reduce board margin */
+    }
+
+    .cell {
+        padding-top: 70%; /* Make cells larger for better touch interaction */
+    }
+
+    .cell img {
+        transition: opacity 0.2s ease; /* Slightly faster transition for responsiveness */
+    }
+
+    .cell:hover {
+        transform: scale(1.02); /* Reduce hover effect for smaller screens */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+    .header {
+        flex-direction: column; /* Stack the header elements vertically */
+        align-items: center; 
+        /* justify-content: space-between; */
+    }
+
+    #new-game-button {
+        /* width: 100%; */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    #board {
+        gap: 3px; /* Minimize gaps further */
+    }
+
+    .cell {
+        padding-top: 80%; /* Make cells larger for very small screens */
+    }
+}
+
+  
