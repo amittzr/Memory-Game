@@ -54,10 +54,16 @@ body {
 
     font-family: "Permanent Marker", serif;
     font-style: normal;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+
   }
   
   #new-game-button:hover {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffd92e;
+
   }
   
   /* Board styles */
