@@ -169,7 +169,7 @@ body {
         font-size: 1.5rem; /* Further reduce font size */
     }
     .header {
-        flex-direction: column; /* Stack the header elements vertically */
+        flex-direction: row; /* Stack the header elements vertically */
         align-items: center; 
         /* justify-content: space-between; */
     }
