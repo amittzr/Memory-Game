@@ -1,4 +1,4 @@
-/* General styles */
+General styles
 body {
     font-family: Arial, sans-serif;
     /* background-color: #f8f9fa; */
@@ -16,7 +16,12 @@ body {
     font-family: "Rubik Vinyl", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  h2{
+    font-family: "Permanent Marker", serif;
+    font-style: normal;
   }
   
   .header {
@@ -41,7 +46,7 @@ body {
     color: #6c757d;
   }
   
-  #new-game-button {
+  .btn {
     padding: 10px 20px;
     font-size: 16px;
     /* color: #fff; */
@@ -59,11 +64,24 @@ body {
 
   }
   
-  #new-game-button:hover {
+  .btn:hover{
     /* background-color: #0056b3; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: #ffd92e;
 
+  }
+
+  .start-btn{
+    margin-top: 60px;
+    padding: 15px 30px;
+    font-size: 22px;
+
+    color: black;
+  }
+
+  #level-title{
+    text-align: center;
+    font-size: 3rem;
   }
   
   /* Board styles */
@@ -79,7 +97,7 @@ body {
     width: 100%;
     padding-top: 50%; 
     background-color: #e9ecef; 
-    background-image: url('assets/racoon.jpg'); 
+    /* background-image: url('assets/racoon.jpg');  */
     background-size: cover; 
     background-position: center; /* Centers the image */
     border: 1px solid #ced4da;
@@ -87,6 +105,14 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow */
+}
+
+.cell-animals{
+    background-image: url('assets/racoon.jpg');
+}
+
+.cell-simpsons{
+    background-image: url('assets/simpson/back.jpg');
 }
 
 .cell:hover {
@@ -113,6 +139,74 @@ body {
 
 .cell.revealed img {
     opacity: 1; /* Reveals the image */
+}
+
+/* Home Page Styles */
+#home-page {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.level-selection {
+    margin-top: 30px;
+}
+
+.level-button , .theme-btn {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 22px;
+
+    border: none;
+
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+
+.level-button:hover {
+    transform: scale(1.05);
+}
+
+/* Hide the game page initially */
+#game-page {
+    margin: 20px auto;
+}
+
+
+.theme-selection {
+    margin-top: 50px;
+}
+
+.simpson-btn{
+    color: #58626d;
+    background-color: pink;
+}
+
+.simpson-btn:hover{
+    background-color: rgb(255, 165, 180);
+}
+
+.level-button.selected, .theme-btn.selected {
+    background-color: #ffd700; /* Example: gold background */
+    color: #000; /* Black text for contrast */
+    border: 2px solid #000; /* Optional: add a border for emphasis */
+}
+
+
+/* simpsone */
+.simpson-select{
+    background-color: rgb(255, 165, 180);
+    color: #000; /* Black text for contrast */
+    border: 2px solid #000; /* Optional: add a border for emphasis */
+}
+.simpson-select-home{
+    color: #58626d;
+    background-color: pink;
+}
+
+.simpson-select-home:hover{
+    color: #58626d;
+    background-color: rgb(255, 165, 180);
 }
 
 
@@ -188,5 +282,6 @@ body {
         padding-top: 80%; /* Make cells larger for very small screens */
     }
 }
+
 
   

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,4 +21,59 @@
     <div id="board" class="board"></div>
   <script src="script.js"></script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+
+    <title>Memory Game</title>
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page">
+        <h1>Memory Game</h1>
+        <div class="level-selection">
+            <h2>Choose Your Level</h2>
+            <button class="level-button btn" data-level="easy">Easy</button>
+            <button class="level-button btn" data-level="medium">Medium</button>
+            <button class="level-button btn" data-level="hard">Hard</button>
+        </div>
+
+        <div class="theme-selection">
+            <h2>Select Theme</h2>
+            <button class="btn theme-btn" data-theme="Animals">Funny Animals</button>
+            <button class="btn theme-btn simpson-btn" data-theme="Simpson">Simpson</button>
+        </div>
+        <div>
+            <button id="startGameButton" class="btn start-btn">Start</button>
+        </div>
+    </div>
+    
+    <!-- Game Page -->
+    <div id="game-page" style="display: none;">
+        <h1 id="level-title"></h1>
+        <div class="header">
+            <div>
+                <button id="return-home-button" class="btn">Home</button>
+                <button id="new-game-button" class="btn">New Game</button>
+            </div>
+            
+            <div id="counters">
+                <span id="match-counter">Matches: 0</span>
+                <span id="step-counter">Moves: 0</span>
+            </div>
+        </div>
+        <div id="board" class="board"></div>        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>
+
